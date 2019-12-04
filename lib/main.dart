@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'widgets/animatedcontainer_example.dart';
 import 'widgets/expanded_example.dart';
 import 'widgets/safearea_example.dart';
 import 'widgets/wrap_example.dart';
@@ -19,10 +20,24 @@ class MyApp extends StatelessWidget {
   }
 }
 
+class Entry {
+  Entry(this.index, this.name, this.prototype);
+  final int index;
+  final String name;
+  final Function() prototype;
+}
+
 class WidgetSelection extends StatelessWidget {
   WidgetSelection({Key key, this.title}) : super(key: key);
 
   final String title;
+
+  final _weeks = <Entry>[
+    Entry(1, 'SafeArea', () => SafeAreaExample()),
+    Entry(2, 'Expanded', () => ExpandedExample()),
+    Entry(3, 'Wrap', () => WrapExample()),
+    Entry(4, 'AnimatedContainer', () => AnimatedContainerExample()),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -31,32 +46,22 @@ class WidgetSelection extends StatelessWidget {
         title: Text(title),
       ),
       body: ListView(
-        children: <Widget>[
-          ListTile(
-            title: Text('SafeArea'),
-            subtitle: Text('Week #1'),
-            onTap: () {
-              _navigate(context, toContent: SafeAreaExample());
-            },
-          ),
-          Divider(),
-          ListTile(
-            title: Text('Expanded'),
-            subtitle: Text('Week #2'),
-            onTap: () {
-              _navigate(context, toContent: ExpandedExample());
-            },
-          ),
-          Divider(),
-          ListTile(
-            title: Text('Wrap'),
-            subtitle: Text('Week #3'),
-            onTap: () {
-              _navigate(context, toContent: WrapExample());
-            },
-          ),
-          Divider(),
-        ],
+        children: _weeks
+            .map((entry) {
+              return ListTile(
+                title: Text(
+                  entry.name,
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+                subtitle: Text('Week #${entry.index}'),
+                trailing: Icon(Icons.chevron_right),
+                onTap: () {
+                  _navigate(context, toContent: entry.prototype());
+                },
+              );
+            })
+            .expand((item) => [item, Divider()])
+            .toList(),
       ),
     );
   }

@@ -5,7 +5,6 @@ https://www.youtube.com/playlist?list=PLjxrf2q8roU23XGwz3Km7sQZFTdB996iG
 1. SafeArea https://youtu.be/lkF0TQJO0bA
 2. Expanded https://youtu.be/_rnZaagadyo
 3. Wrap https://youtu.be/z5iw2SeFx2M
-
 4. AnimatedContainer https://youtu.be/yI-8QHpGIP4
 5. Opacity https://youtu.be/9hltevOHQBw
 6. FutureBuilder https://youtu.be/ek8ZPdWj4Qo

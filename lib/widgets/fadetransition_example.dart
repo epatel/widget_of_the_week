@@ -24,6 +24,12 @@ class _FadeTransitionExampleState extends State<FadeTransitionExample>
   }
 
   @override
+  dispose() {
+    _animationController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(

@@ -2,7 +2,12 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
+import '../week_entry.dart';
+
 class AnimatedContainerExample extends StatefulWidget {
+  static final weekEntry =
+      WeekEntry(4, 'AnimatedContainer', () => AnimatedContainerExample());
+
   @override
   _AnimatedContainerExampleState createState() =>
       _AnimatedContainerExampleState();

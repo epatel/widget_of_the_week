@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
+import '../week_entry.dart';
+
 class SafeAreaExample extends StatefulWidget {
+  static final weekEntry = WeekEntry(1, 'SafeArea', () => SafeAreaExample());
+
   @override
   _SafeAreaExampleState createState() => _SafeAreaExampleState();
 }

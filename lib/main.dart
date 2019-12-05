@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'week_entry.dart';
 import 'widgets/animatedcontainer_example.dart';
 import 'widgets/expanded_example.dart';
 import 'widgets/fadetransition_example.dart';
@@ -23,30 +24,24 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class Entry {
-  Entry(this.index, this.name, this.prototype);
-  final int index;
-  final String name;
-  final Function() prototype;
-}
-
 class WidgetSelection extends StatelessWidget {
   WidgetSelection({Key key, this.title}) : super(key: key);
 
   final String title;
 
-  final _weeks = <Entry>[
-    Entry(1, 'SafeArea', () => SafeAreaExample()),
-    Entry(2, 'Expanded', () => ExpandedExample()),
-    Entry(3, 'Wrap', () => WrapExample()),
-    Entry(4, 'AnimatedContainer', () => AnimatedContainerExample()),
-    Entry(5, 'Opacity', () => OpacityExample()),
-    Entry(6, 'FutureBuilder', () => FutureBuilderExample()),
-    Entry(7, 'FadeTransition', () => FadeTransitionExample()),    
+  final _weeks = <WeekEntry>[
+    SafeAreaExample.weekEntry,
+    ExpandedExample.weekEntry,
+    WrapExample.weekEntry,
+    AnimatedContainerExample.weekEntry,
+    OpacityExample.weekEntry,
+    FutureBuilderExample.weekEntry,
+    FadeTransitionExample.weekEntry,
   ];
 
   @override
   Widget build(BuildContext context) {
+    _weeks.sort((a, b) => a.week.compareTo(b.week));
     return Scaffold(
       appBar: AppBar(
         title: Text(title),
@@ -60,16 +55,16 @@ class WidgetSelection extends StatelessWidget {
     );
   }
 
-  Widget _makeListTile(BuildContext context, Entry entry) {
+  Widget _makeListTile(BuildContext context, WeekEntry entry) {
     return ListTile(
       title: Text(
         entry.name,
         style: TextStyle(fontWeight: FontWeight.bold),
       ),
-      subtitle: Text('Week #${entry.index}'),
+      subtitle: Text('Week #${entry.week}'),
       trailing: Icon(Icons.chevron_right),
       onTap: () {
-        _navigate(context, toContent: entry.prototype());
+        _navigate(context, toContent: entry.create());
       },
     );
   }

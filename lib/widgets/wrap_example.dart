@@ -2,7 +2,11 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
+import '../week_entry.dart';
+
 class WrapExample extends StatefulWidget {
+  static final weekEntry = WeekEntry(3, 'Wrap', () => WrapExample());
+
   @override
   _WrapExampleState createState() => _WrapExampleState();
 }
@@ -96,7 +100,7 @@ class _WrapExampleState extends State<WrapExample> {
 
   Widget _makeContainer({int index, Color color}) {
     return Container(
-      width: 80+Random().nextDouble()*40.0,
+      width: 80 + Random().nextDouble() * 40.0,
       height: 80,
       color: color,
       child: Text('$index'),

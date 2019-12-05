@@ -2,7 +2,12 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 
+import '../week_entry.dart';
+
 class FutureBuilderExample extends StatelessWidget {
+  static final weekEntry =
+      WeekEntry(6, 'FutureBuilder', () => FutureBuilderExample());
+
   final _completer = Completer();
 
   @override

@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
+import '../week_entry.dart';
+
 class ExpandedExample extends StatefulWidget {
+  static final weekEntry = WeekEntry(2, 'Expanded', () => ExpandedExample());
+
   @override
   _ExpandedExampleState createState() => _ExpandedExampleState();
 }

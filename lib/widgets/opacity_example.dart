@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
+import '../week_entry.dart';
+
 class OpacityExample extends StatefulWidget {
+  static final weekEntry = WeekEntry(5, 'Opacity', () => OpacityExample());
+
   @override
   _OpacityExampleState createState() => _OpacityExampleState();
 }

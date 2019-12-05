@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 
+import '../week_entry.dart';
+
 class FadeTransitionExample extends StatefulWidget {
+  static final weekEntry =
+      WeekEntry(7, 'FadeTransition', () => FadeTransitionExample());
+
   @override
   _FadeTransitionExampleState createState() => _FadeTransitionExampleState();
 }

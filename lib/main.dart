@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'widgets/animatedcontainer_example.dart';
 import 'widgets/expanded_example.dart';
+import 'widgets/futurebuilder_example.dart';
 import 'widgets/opacity_example.dart';
 import 'widgets/safearea_example.dart';
 import 'widgets/wrap_example.dart';
@@ -39,6 +40,7 @@ class WidgetSelection extends StatelessWidget {
     Entry(3, 'Wrap', () => WrapExample()),
     Entry(4, 'AnimatedContainer', () => AnimatedContainerExample()),
     Entry(5, 'Opacity', () => OpacityExample()),
+    Entry(6, 'FutureBuilder', () => FutureBuilderExample()),
   ];
 
   @override

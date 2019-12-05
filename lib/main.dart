@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'widgets/animatedcontainer_example.dart';
 import 'widgets/expanded_example.dart';
+import 'widgets/opacity_example.dart';
 import 'widgets/safearea_example.dart';
 import 'widgets/wrap_example.dart';
 
@@ -37,6 +38,7 @@ class WidgetSelection extends StatelessWidget {
     Entry(2, 'Expanded', () => ExpandedExample()),
     Entry(3, 'Wrap', () => WrapExample()),
     Entry(4, 'AnimatedContainer', () => AnimatedContainerExample()),
+    Entry(5, 'Opacity', () => OpacityExample()),
   ];
 
   @override
@@ -47,22 +49,24 @@ class WidgetSelection extends StatelessWidget {
       ),
       body: ListView(
         children: _weeks
-            .map((entry) {
-              return ListTile(
-                title: Text(
-                  entry.name,
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
-                subtitle: Text('Week #${entry.index}'),
-                trailing: Icon(Icons.chevron_right),
-                onTap: () {
-                  _navigate(context, toContent: entry.prototype());
-                },
-              );
-            })
+            .map((entry) => _makeListTile(context, entry))
             .expand((item) => [item, Divider()])
             .toList(),
       ),
+    );
+  }
+
+  Widget _makeListTile(BuildContext context, Entry entry) {
+    return ListTile(
+      title: Text(
+        entry.name,
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      subtitle: Text('Week #${entry.index}'),
+      trailing: Icon(Icons.chevron_right),
+      onTap: () {
+        _navigate(context, toContent: entry.prototype());
+      },
     );
   }
 

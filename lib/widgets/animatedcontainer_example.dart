@@ -57,7 +57,7 @@ class _AnimatedContainerExampleState extends State<AnimatedContainerExample> {
       case 1:
         _color = Colors.blue;
         _height = 200;
-        _angle = pi / 2;
+        _angle = pi / 4;
         break;
       default:
         _color = Colors.red;

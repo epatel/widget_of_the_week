@@ -99,7 +99,7 @@ class _WrapExampleState extends State<WrapExample> {
       width: 80+Random().nextDouble()*40.0,
       height: 80,
       color: color,
-      child: Text('${index}'),
+      child: Text('$index'),
     );
   }
 

@@ -26,7 +26,7 @@ class _AnimatedContainerExampleState extends State<AnimatedContainerExample> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('AnimatedContainer'),
+        title: Text(AnimatedContainerExample.weekEntry.name),
       ),
       body: Stack(
         children: <Widget>[

@@ -7,6 +7,7 @@ import 'widgets/fadetransition_example.dart';
 import 'widgets/floatingactionbutton_example.dart';
 import 'widgets/futurebuilder_example.dart';
 import 'widgets/opacity_example.dart';
+import 'widgets/pageview_example.dart';
 import 'widgets/safearea_example.dart';
 import 'widgets/wrap_example.dart';
 
@@ -39,6 +40,7 @@ class WidgetSelection extends StatelessWidget {
     FutureBuilderExample.weekEntry,
     FadeTransitionExample.weekEntry,
     FloatingActionButtonExample.weekEntry,
+    PageViewExample.weekEntry,
   ];
 
   @override

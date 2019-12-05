@@ -16,7 +16,7 @@ class _ExpandedExampleState extends State<ExpandedExample> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Expanded'),
+        title: Text(ExpandedExample.weekEntry.name),
       ),
       body: _body(),
     );

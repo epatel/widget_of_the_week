@@ -19,7 +19,7 @@ class _WrapExampleState extends State<WrapExample> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Wrap'),
+        title: Text(WrapExample.weekEntry.name),
         actions: _actions(),
       ),
       body: _body(),

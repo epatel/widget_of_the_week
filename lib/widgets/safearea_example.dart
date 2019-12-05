@@ -17,7 +17,7 @@ class _SafeAreaExampleState extends State<SafeAreaExample> {
     return Scaffold(
       appBar: AppBar(
         actions: _actions(),
-        title: Text('SafeArea'),
+        title: Text(SafeAreaExample.weekEntry.name),
       ),
       body: _withSafeArea ? SafeArea(child: _listView()) : _listView(),
     );

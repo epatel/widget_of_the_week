@@ -33,7 +33,7 @@ class _FadeTransitionExampleState extends State<FadeTransitionExample>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('FadeTransition'),
+        title: Text(FadeTransitionExample.weekEntry.name),
       ),
       body: _body(),
     );

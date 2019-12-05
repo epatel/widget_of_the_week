@@ -14,7 +14,7 @@ class FutureBuilderExample extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('FutureBuilder'),
+        title: Text(FutureBuilderExample.weekEntry.name),
       ),
       body: Column(
         children: <Widget>[

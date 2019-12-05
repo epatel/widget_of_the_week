@@ -39,7 +39,7 @@ class _FloatingActionButtonExampleState
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('FloatingActionButton'),
+        title: Text(FloatingActionButtonExample.weekEntry.name),
       ),
       body: _body(),
       floatingActionButton: FloatingActionButton(

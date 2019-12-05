@@ -17,7 +17,7 @@ class _OpacityExampleState extends State<OpacityExample> {
     return Scaffold(
       appBar: AppBar(
         actions: _actions(),
-        title: Text('Opacity'),
+        title: Text(OpacityExample.weekEntry.name),
       ),
       body: _column(),
     );

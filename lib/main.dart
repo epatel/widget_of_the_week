@@ -10,6 +10,7 @@ import 'widgets/opacity_example.dart';
 import 'widgets/pageview_example.dart';
 import 'widgets/safearea_example.dart';
 import 'widgets/sliverappbar_example.dart';
+import 'widgets/sliverlistandgrid_example.dart';
 import 'widgets/table_example.dart';
 import 'widgets/wrap_example.dart';
 
@@ -45,6 +46,7 @@ class WidgetSelection extends StatelessWidget {
     PageViewExample.weekEntry,
     TableExample.weekEntry,
     SliverAppBarExample.weekEntry,
+    SliverListAndGridExample.weekEntry,
   ];
 
   @override

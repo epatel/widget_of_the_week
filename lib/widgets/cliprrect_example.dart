@@ -13,7 +13,7 @@ class CustomClipPath extends CustomClipper<Path> {
   @override
   Path getClip(Size size) {
     Path path = Path(); // Top left
-    path.lineTo(size.width/2, size.height); // Down center
+    path.lineTo(size.width / 2, size.height); // Down center
     path.lineTo(size.width, 0); // Top right
     return path;
   }

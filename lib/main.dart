@@ -8,6 +8,7 @@ import 'widgets/fadeinimage_example.dart';
 import 'widgets/fadetransition_example.dart';
 import 'widgets/floatingactionbutton_example.dart';
 import 'widgets/futurebuilder_example.dart';
+import 'widgets/hero_example.dart';
 import 'widgets/inheritedmodel_example.dart';
 import 'widgets/opacity_example.dart';
 import 'widgets/pageview_example.dart';
@@ -55,6 +56,7 @@ class WidgetSelection extends StatelessWidget {
     StreamBuilderExample.weekEntry,
     InheritedModelExample.weekEntry,
     ClipRRectExample.weekEntry,
+    HeroExample.weekEntry,
   ];
 
   @override

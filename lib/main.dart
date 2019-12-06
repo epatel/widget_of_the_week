@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'week_entry.dart';
 import 'widgets/animatedcontainer_example.dart';
 import 'widgets/expanded_example.dart';
+import 'widgets/fadeinimage_example.dart';
 import 'widgets/fadetransition_example.dart';
 import 'widgets/floatingactionbutton_example.dart';
 import 'widgets/futurebuilder_example.dart';
@@ -47,6 +48,7 @@ class WidgetSelection extends StatelessWidget {
     TableExample.weekEntry,
     SliverAppBarExample.weekEntry,
     SliverListAndGridExample.weekEntry,
+    FadeInImageExample.weekEntry,
   ];
 
   @override

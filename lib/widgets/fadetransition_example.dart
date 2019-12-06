@@ -13,6 +13,7 @@ class FadeTransitionExample extends StatefulWidget {
 class _FadeTransitionExampleState extends State<FadeTransitionExample>
     with SingleTickerProviderStateMixin {
   AnimationController _animationController;
+  String _buttonTitle;
 
   @override
   void initState() {
@@ -21,6 +22,7 @@ class _FadeTransitionExampleState extends State<FadeTransitionExample>
       vsync: this,
       duration: Duration(seconds: 1),
     );
+    _buttonTitle = 'Fade Out';
   }
 
   @override
@@ -45,13 +47,17 @@ class _FadeTransitionExampleState extends State<FadeTransitionExample>
         Center(
           child: FlatButton(
             color: Colors.green,
-            child: Text('Fade!'),
+            child: Text(_buttonTitle),
             onPressed: () {
+              setState(() {
               if (_animationController.isCompleted) {
                 _animationController.reverse();
+                _buttonTitle = 'Fade Out';
               } else {
                 _animationController.forward();
+                _buttonTitle = 'Fade In';
               }
+              });
             },
           ),
         ),

@@ -12,8 +12,7 @@ class FadeInImageExample extends StatefulWidget {
   _FadeInImageExampleState createState() => _FadeInImageExampleState();
 }
 
-class _FadeInImageExampleState extends State<FadeInImageExample>
-    with SingleTickerProviderStateMixin {
+class _FadeInImageExampleState extends State<FadeInImageExample> {
   bool started = false;
 
   @override
@@ -33,7 +32,10 @@ class _FadeInImageExampleState extends State<FadeInImageExample>
         Center(
           child: FlatButton(
             color: started ? Colors.black12 : Colors.green,
-            child: Text('Start', style: TextStyle(color: Colors.white),),
+            child: Text(
+              'Start',
+              style: TextStyle(color: Colors.white),
+            ),
             onPressed: started
                 ? () {}
                 : () {

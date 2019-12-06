@@ -55,10 +55,10 @@ class _InheritedModelExampleState extends State<InheritedModelExample> {
   void initState() {
     super.initState();
     _timer = Timer.periodic(Duration(seconds: 2), (_) {
-        setState(() {
-          _index++;
-          _parentName = 'Parent Name ($_index)';
-        });
+      setState(() {
+        _index++;
+        _parentName = 'Parent Name ($_index)';
+      });
     });
     _pages = PageView(
       controller: _pageController,
@@ -84,7 +84,8 @@ class _InheritedModelExampleState extends State<InheritedModelExample> {
   }
 
   Widget _page(BuildContext context, String text) {
-    print('Create a page'); // Should only see 3 pages created. Children updated without a full update
+    print(
+        'Create a page'); // Should only see 3 pages created. Children updated without a full update
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [

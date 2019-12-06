@@ -50,13 +50,13 @@ class _FadeTransitionExampleState extends State<FadeTransitionExample>
             child: Text(_buttonTitle),
             onPressed: () {
               setState(() {
-              if (_animationController.isCompleted) {
-                _animationController.reverse();
-                _buttonTitle = 'Fade Out';
-              } else {
-                _animationController.forward();
-                _buttonTitle = 'Fade In';
-              }
+                if (_animationController.isCompleted) {
+                  _animationController.reverse();
+                  _buttonTitle = 'Fade Out';
+                } else {
+                  _animationController.forward();
+                  _buttonTitle = 'Fade In';
+                }
               });
             },
           ),

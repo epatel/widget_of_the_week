@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 
 import '../week_entry.dart';
@@ -9,6 +7,19 @@ class ClipRRectExample extends StatefulWidget {
 
   @override
   _ClipRRectExampleState createState() => _ClipRRectExampleState();
+}
+
+class CustomClipPath extends CustomClipper<Path> {
+  @override
+  Path getClip(Size size) {
+    Path path = Path(); // Top left
+    path.lineTo(size.width/2, size.height); // Down center
+    path.lineTo(size.width, 0); // Top right
+    return path;
+  }
+
+  @override
+  bool shouldReclip(CustomClipper<Path> oldClipper) => false;
 }
 
 class _ClipRRectExampleState extends State<ClipRRectExample> {
@@ -48,7 +59,7 @@ class _ClipRRectExampleState extends State<ClipRRectExample> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Text('ClipRRect/ClipOval:'),
+              Text('ClipRRect/ClipPath:'),
               Switch(
                 value: _withClipOval,
                 onChanged: (value) {
@@ -66,7 +77,8 @@ class _ClipRRectExampleState extends State<ClipRRectExample> {
         Center(
           child: _withClipRRect
               ? (_withClipOval
-                  ? ClipOval(
+                  ? ClipPath(
+                      clipper: CustomClipPath(),
                       child: _image(),
                     )
                   : ClipRRect(

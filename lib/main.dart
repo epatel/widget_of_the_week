@@ -21,11 +21,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Widget Of The Week',
+      title: 'Widget of the Week',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: WidgetSelection(title: 'Widget Of The Week'),
+      home: WidgetSelection(title: 'Widget of the Week'),
     );
   }
 }

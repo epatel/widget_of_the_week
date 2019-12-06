@@ -1,4 +1,4 @@
-# Widget Of The Week demos
+# Widget of the Week demos
 
 https://www.youtube.com/playlist?list=PLjxrf2q8roU23XGwz3Km7sQZFTdB996iG
 

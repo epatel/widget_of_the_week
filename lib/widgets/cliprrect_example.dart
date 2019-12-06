@@ -2,13 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../week_entry.dart';
 
-class ClipRRectExample extends StatefulWidget {
-  static final weekEntry = WeekEntry(16, 'ClipRRect', () => ClipRRectExample());
-
-  @override
-  _ClipRRectExampleState createState() => _ClipRRectExampleState();
-}
-
+/// CustomClipPath for the example
 class CustomClipPath extends CustomClipper<Path> {
   @override
   Path getClip(Size size) {
@@ -20,6 +14,14 @@ class CustomClipPath extends CustomClipper<Path> {
 
   @override
   bool shouldReclip(CustomClipper<Path> oldClipper) => false;
+}
+
+/// The example
+class ClipRRectExample extends StatefulWidget {
+  static final weekEntry = WeekEntry(16, 'ClipRRect', () => ClipRRectExample());
+
+  @override
+  _ClipRRectExampleState createState() => _ClipRRectExampleState();
 }
 
 class _ClipRRectExampleState extends State<ClipRRectExample> {

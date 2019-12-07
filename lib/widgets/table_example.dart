@@ -11,23 +11,32 @@ class TableExample extends StatelessWidget {
       appBar: AppBar(
         title: Text(weekEntry.name),
       ),
-      body: Table(
-        children: List.generate(10, (rowIndex) => _row(rowIndex)),
+      body: Builder(
+        builder: (context) {
+          return Table(
+            children: List.generate(10, (rowIndex) => _row(context, rowIndex)),
+          );
+        },
       ),
     );
   }
 
-  TableRow _row(int rowIndex) {
+  TableRow _row(BuildContext context, int rowIndex) {
     return TableRow(
-      children: List.generate(4, (columnIndex) => _cell(columnIndex, rowIndex)),
+      children: List.generate(
+          4, (columnIndex) => _cell(context, columnIndex, rowIndex)),
     );
   }
 
-  Widget _cell(int columnIndex, int rowIndex) {
-    return Container(
-      width: 50,
-      height: 50,
-      color: (columnIndex + rowIndex) % 2 == 1 ? Colors.red : Colors.black,
+  Widget _cell(BuildContext context, int columnIndex, int rowIndex) {
+    final aspectRatio = MediaQuery.of(context).size.width /
+        (MediaQuery.of(context).size.height -
+            Scaffold.of(context).appBarMaxHeight);
+    return AspectRatio(
+      aspectRatio: aspectRatio / (4 / 10),
+      child: Container(
+        color: (columnIndex + rowIndex) % 2 == 1 ? Colors.red : Colors.black,
+      ),
     );
   }
 }

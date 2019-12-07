@@ -2,68 +2,95 @@ import 'package:flutter/material.dart';
 
 import '../week_entry.dart';
 
-class HeroExample extends StatefulWidget {
+class HeroExample extends StatelessWidget {
   static final weekEntry = WeekEntry(17, 'Hero', () => HeroExample());
 
-  @override
-  _HeroExampleState createState() => _HeroExampleState();
-}
+  HeroExample({this.firstPage = true});
 
-class _HeroExampleState extends State<HeroExample> {
-  var _withOpacity = false;
+  final firstPage;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        actions: _actions(),
         title: Text(HeroExample.weekEntry.name),
       ),
-      body: _column(),
-    );
-  }
-
-  Widget _column() {
-    return Column(
-      children: <Widget>[
-        _container(Colors.red),
-        _opacityContainer(Colors.yellow),
-        _container(Colors.green),
-        _opacityContainer(Colors.blue),
-        _container(Colors.pink),
-      ],
-    );
-  }
-
-  Widget _container(Color color) {
-    return Expanded(
-      child: Container(
-        color: color,
+      body: Container(
+        color: firstPage ? Colors.blue : Colors.yellow,
+        child: firstPage ? _firstPage(context) : _secondPage(context),
       ),
     );
   }
 
-  Widget _opacityContainer(Color color) {
-    return Expanded(
-      child: Opacity(
-        opacity: _withOpacity ? 0.0 : 1.0,
-        child: Container(
-          color: color,
+  Widget _firstPage(BuildContext context) {
+    return Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          _text(),
+          Padding(
+            padding: EdgeInsets.only(top: 20),
+          ),
+          _image(),
+          Padding(
+            padding: EdgeInsets.only(top: 20),
+          ),
+          FlatButton(
+            color: Colors.green,
+            child: Icon(Icons.navigate_next),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => HeroExample(
+                          firstPage: false,
+                        )),
+              );
+            },
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _secondPage(BuildContext context) {
+    return Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          _image(width: 200),
+          Padding(
+            padding: EdgeInsets.only(top: 20),
+          ),
+          _text(),
+          Padding(
+            padding: EdgeInsets.only(top: 200),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _text() {
+    return Hero(
+      tag: 'text-tag',
+      child: Text(
+        'Look, I am a Hero!',
+        style: TextStyle(
+          fontSize: 32,
+          fontWeight: FontWeight.w800,
         ),
       ),
     );
   }
 
-  List<Widget> _actions() {
-    return <Widget>[
-      Switch(
-        value: _withOpacity,
-        onChanged: (bool value) {
-          setState(() {
-            _withOpacity = value;
-          });
-        },
+  Widget _image({double width = 400}) {
+    return Hero(
+      tag: 'image-tag',
+      child: Image.asset(
+        'assets/fluttersweden.png',
+        width: width,
       ),
-    ];
+    );
   }
 }

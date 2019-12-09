@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'week_entry.dart';
 import 'widgets/animatedcontainer_example.dart';
 import 'widgets/cliprrect_example.dart';
+import 'widgets/custompaint_example.dart';
 import 'widgets/expanded_example.dart';
 import 'widgets/fadeinimage_example.dart';
 import 'widgets/fadetransition_example.dart';
@@ -57,6 +58,7 @@ class WidgetSelection extends StatelessWidget {
     InheritedModelExample.weekEntry,
     ClipRRectExample.weekEntry,
     HeroExample.weekEntry,
+    CustomPaintExample.weekEntry,
   ];
 
   @override

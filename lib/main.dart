@@ -7,6 +7,7 @@ import 'widgets/custompaint_example.dart';
 import 'widgets/expanded_example.dart';
 import 'widgets/fadeinimage_example.dart';
 import 'widgets/fadetransition_example.dart';
+import 'widgets/fittedbox_example.dart';
 import 'widgets/floatingactionbutton_example.dart';
 import 'widgets/futurebuilder_example.dart';
 import 'widgets/hero_example.dart';
@@ -61,6 +62,7 @@ class WidgetSelection extends StatelessWidget {
     HeroExample.weekEntry,
     CustomPaintExample.weekEntry,
     TooltipExample.weekEntry,
+    FittedBoxExample.weekEntry,
   ];
 
   @override

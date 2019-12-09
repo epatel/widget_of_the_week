@@ -18,6 +18,7 @@ import 'widgets/sliverappbar_example.dart';
 import 'widgets/sliverlistandgrid_example.dart';
 import 'widgets/streambuilder_example.dart';
 import 'widgets/table_example.dart';
+import 'widgets/tooltip_example.dart';
 import 'widgets/wrap_example.dart';
 
 void main() => runApp(MyApp());
@@ -59,6 +60,7 @@ class WidgetSelection extends StatelessWidget {
     ClipRRectExample.weekEntry,
     HeroExample.weekEntry,
     CustomPaintExample.weekEntry,
+    TooltipExample.weekEntry,
   ];
 
   @override

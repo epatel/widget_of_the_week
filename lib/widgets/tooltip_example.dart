@@ -33,6 +33,7 @@ class TooltipExample extends StatelessWidget {
             ),
           ),
         ),
+        Text('Longpress the button and image to bring up the tooltips'),
       ],
     );
   }

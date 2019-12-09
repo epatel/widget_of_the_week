@@ -41,14 +41,17 @@ class _FittedBoxExampleState extends State<FittedBoxExample> {
   }
 
   List<Widget> _actions() {
-    return <Widget>[
-      Switch(
-        value: _withFittedBox,
-        onChanged: (bool value) {
-          setState(() {
-            _withFittedBox = value;
-          });
-        },
+    return [
+      Tooltip(
+        message: 'Switch FittedBox on and off',
+        child: Switch(
+          value: _withFittedBox,
+          onChanged: (bool value) {
+            setState(() {
+              _withFittedBox = value;
+            });
+          },
+        ),
       ),
     ];
   }

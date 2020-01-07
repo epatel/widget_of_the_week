@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'week_entry.dart';
+import 'widgets/absorbpointer_example.dart';
 import 'widgets/animatedcontainer_example.dart';
 import 'widgets/cliprrect_example.dart';
 import 'widgets/custompaint_example.dart';
@@ -12,6 +13,7 @@ import 'widgets/floatingactionbutton_example.dart';
 import 'widgets/futurebuilder_example.dart';
 import 'widgets/hero_example.dart';
 import 'widgets/inheritedmodel_example.dart';
+import 'widgets/layoutbuilder_example.dart';
 import 'widgets/opacity_example.dart';
 import 'widgets/pageview_example.dart';
 import 'widgets/safearea_example.dart';
@@ -63,6 +65,8 @@ class WidgetSelection extends StatelessWidget {
     CustomPaintExample.weekEntry,
     TooltipExample.weekEntry,
     FittedBoxExample.weekEntry,
+    LayoutBuilderExample.weekEntry,
+    AbsorbPointerExample.weekEntry,
   ];
 
   @override

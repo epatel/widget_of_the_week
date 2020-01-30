@@ -22,6 +22,7 @@ import 'widgets/sliverlistandgrid_example.dart';
 import 'widgets/streambuilder_example.dart';
 import 'widgets/table_example.dart';
 import 'widgets/tooltip_example.dart';
+import 'widgets/transform_example.dart';
 import 'widgets/wrap_example.dart';
 
 void main() => runApp(MyApp());
@@ -67,6 +68,24 @@ class WidgetSelection extends StatelessWidget {
     FittedBoxExample.weekEntry,
     LayoutBuilderExample.weekEntry,
     AbsorbPointerExample.weekEntry,
+    TransformExample.weekEntry,
+// 24. BackdropFilter https://youtu.be/dYRs7Q1vfYI
+// 25. Align https://youtu.be/g2E7yl3MwMk
+// 26. Positioned https://youtu.be/EgtPleVwxBQ
+// 27. AnimatedBuilder https://youtu.be/N-RiyZlv8v8
+// 28. Dismissible https://youtu.be/iEMgjrfuc58
+// 29. SizedBox https://youtu.be/EHPu_DzRfqA
+// 30. ValueListenableBuilder https://youtu.be/s-ZG-jS5QHQ
+// 31. Draggable https://youtu.be/QzA4c4QHZCY
+// 32. AnimatedList https://youtu.be/ZtfItHwFlZ8
+// 33. Flexible https://youtu.be/CI7x0mAZiY0
+// 34. MediaQuery https://youtu.be/A3WrA4zAaPw
+// 35. Spacer https://youtu.be/7FJgd7QN1zI
+// 36. InheritedWidget https://youtu.be/1t-8rBCGBYw
+// 37. AnimatedIcon https://youtu.be/pJcbh8pbvJs
+// 38. AspectRatio https://youtu.be/XcnP3_mO_Ms
+// 39. LimitedBox https://youtu.be/uVki2CIzBTs
+// 40. Placeholder https://youtu.be/LPe56fezmoo
   ];
 
   @override

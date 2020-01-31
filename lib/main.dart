@@ -18,6 +18,7 @@ import 'widgets/inheritedmodel_example.dart';
 import 'widgets/layoutbuilder_example.dart';
 import 'widgets/opacity_example.dart';
 import 'widgets/pageview_example.dart';
+import 'widgets/positioned_example.dart';
 import 'widgets/safearea_example.dart';
 import 'widgets/sliverappbar_example.dart';
 import 'widgets/sliverlistandgrid_example.dart';
@@ -73,6 +74,7 @@ class WidgetSelection extends StatelessWidget {
     TransformExample.weekEntry,
     BackdropFilterExample.weekEntry,
     AlignExample.weekEntry,
+    PositionedExample.weekEntry,
 // 26. Positioned https://youtu.be/EgtPleVwxBQ
 // 27. AnimatedBuilder https://youtu.be/N-RiyZlv8v8
 // 28. Dismissible https://youtu.be/iEMgjrfuc58

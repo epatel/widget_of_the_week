@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'week_entry.dart';
 import 'widgets/absorbpointer_example.dart';
 import 'widgets/align_example.dart';
+import 'widgets/animatedbuilder_example.dart';
 import 'widgets/animatedcontainer_example.dart';
 import 'widgets/backdropfilter_example.dart';
 import 'widgets/cliprrect_example.dart';
@@ -59,7 +60,7 @@ class MyApp extends StatelessWidget {
     BackdropFilterExample.weekEntry,
     AlignExample.weekEntry,
     PositionedExample.weekEntry,
-// 26. Positioned https://youtu.be/EgtPleVwxBQ
+    AnimatedBuilderExample.weekEntry,
 // 27. AnimatedBuilder https://youtu.be/N-RiyZlv8v8
 // 28. Dismissible https://youtu.be/iEMgjrfuc58
 // 29. SizedBox https://youtu.be/EHPu_DzRfqA

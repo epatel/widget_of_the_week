@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'week_entry.dart';
 import 'widgets/absorbpointer_example.dart';
 import 'widgets/animatedcontainer_example.dart';
+import 'widgets/backdropfilter_example.dart';
 import 'widgets/cliprrect_example.dart';
 import 'widgets/custompaint_example.dart';
 import 'widgets/expanded_example.dart';
@@ -69,7 +70,7 @@ class WidgetSelection extends StatelessWidget {
     LayoutBuilderExample.weekEntry,
     AbsorbPointerExample.weekEntry,
     TransformExample.weekEntry,
-// 24. BackdropFilter https://youtu.be/dYRs7Q1vfYI
+    BackdropFilterExample.weekEntry,
 // 25. Align https://youtu.be/g2E7yl3MwMk
 // 26. Positioned https://youtu.be/EgtPleVwxBQ
 // 27. AnimatedBuilder https://youtu.be/N-RiyZlv8v8

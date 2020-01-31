@@ -44,7 +44,9 @@ class _TransformExampleState extends State<TransformExample> {
             },
           ),
           alignment: Alignment.center,
-          transform: _transform ? (Matrix4.identity()..rotateZ(-pi/2)) : Matrix4.identity(),
+          transform: _transform
+              ? (Matrix4.identity()..rotateZ(-pi / 2))
+              : Matrix4.identity(),
         ),
       ),
     );

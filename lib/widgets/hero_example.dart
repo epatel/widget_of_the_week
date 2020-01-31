@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../week_entry.dart';
 
 class HeroExample extends StatelessWidget {
-  static final weekEntry = WeekEntry(17, 'Hero', () => HeroExample());
+  static final weekEntry = WeekEntry(17, 'Hero', (context) => HeroExample());
 
   HeroExample({this.firstPage = true});
 

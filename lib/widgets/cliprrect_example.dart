@@ -18,7 +18,7 @@ class CustomClipPath extends CustomClipper<Path> {
 
 /// The example
 class ClipRRectExample extends StatefulWidget {
-  static final weekEntry = WeekEntry(16, 'ClipRRect', () => ClipRRectExample());
+  static final weekEntry = WeekEntry(16, 'ClipRRect', (context) => ClipRRectExample());
 
   @override
   _ClipRRectExampleState createState() => _ClipRRectExampleState();

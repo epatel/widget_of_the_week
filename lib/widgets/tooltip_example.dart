@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../week_entry.dart';
 
 class TooltipExample extends StatelessWidget {
-  static final weekEntry = WeekEntry(19, 'Tooltip', () => TooltipExample());
+  static final weekEntry = WeekEntry(19, 'Tooltip', (context) => TooltipExample());
 
   @override
   Widget build(BuildContext context) {

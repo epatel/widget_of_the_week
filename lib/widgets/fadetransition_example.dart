@@ -4,7 +4,7 @@ import '../week_entry.dart';
 
 class FadeTransitionExample extends StatefulWidget {
   static final weekEntry =
-      WeekEntry(7, 'FadeTransition', () => FadeTransitionExample());
+      WeekEntry(7, 'FadeTransition', (context) => FadeTransitionExample());
 
   @override
   _FadeTransitionExampleState createState() => _FadeTransitionExampleState();

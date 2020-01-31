@@ -6,7 +6,7 @@ import '../week_entry.dart';
 
 class FadeInImageExample extends StatefulWidget {
   static final weekEntry =
-      WeekEntry(13, 'FadeInImage', () => FadeInImageExample());
+      WeekEntry(13, 'FadeInImage', (context) => FadeInImageExample());
 
   @override
   _FadeInImageExampleState createState() => _FadeInImageExampleState();

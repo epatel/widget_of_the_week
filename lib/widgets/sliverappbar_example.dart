@@ -4,7 +4,7 @@ import '../week_entry.dart';
 
 class SliverAppBarExample extends StatelessWidget {
   static final weekEntry =
-      WeekEntry(11, 'SliverAppBar', () => SliverAppBarExample());
+      WeekEntry(11, 'SliverAppBar', (context) => SliverAppBarExample());
 
   @override
   Widget build(BuildContext context) {

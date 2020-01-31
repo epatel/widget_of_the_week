@@ -6,7 +6,7 @@ import '../week_entry.dart';
 
 class StreamBuilderExample extends StatefulWidget {
   static final weekEntry =
-      WeekEntry(14, 'StreamBuilder', () => StreamBuilderExample());
+      WeekEntry(14, 'StreamBuilder', (context) => StreamBuilderExample());
 
   @override
   _StreamBuilderExampleState createState() => _StreamBuilderExampleState();

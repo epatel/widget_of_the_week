@@ -4,7 +4,7 @@ import '../week_entry.dart';
 
 class FloatingActionButtonExample extends StatefulWidget {
   static final weekEntry =
-      WeekEntry(8, 'FloatingActionButton', () => FloatingActionButtonExample());
+      WeekEntry(8, 'FloatingActionButton', (context) => FloatingActionButtonExample());
 
   @override
   _FloatingActionButtonExampleState createState() =>

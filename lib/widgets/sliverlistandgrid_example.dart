@@ -4,7 +4,7 @@ import '../week_entry.dart';
 
 class SliverListAndGridExample extends StatelessWidget {
   static final weekEntry = WeekEntry(
-      12, 'SliverList & SliverGrid', () => SliverListAndGridExample());
+      12, 'SliverList & SliverGrid', (context) => SliverListAndGridExample());
 
   @override
   Widget build(BuildContext context) {

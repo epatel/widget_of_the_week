@@ -31,22 +31,6 @@ import 'widgets/wrap_example.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Widget of the Week',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: WidgetSelection(title: 'Widget of the Week'),
-    );
-  }
-}
-
-class WidgetSelection extends StatelessWidget {
-  WidgetSelection({Key key, this.title}) : super(key: key);
-
-  final String title;
 
   final _weeks = <WeekEntry>[
     SafeAreaExample.weekEntry,
@@ -94,13 +78,36 @@ class WidgetSelection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    _weeks.sort((a, b) => a.week.compareTo(b.week));
+    var routes = Map<String, WidgetBuilder>();
+    _weeks.forEach((entry) {
+      routes['/${entry.week}'] = entry.create;
+    });
+    return MaterialApp(
+      title: 'Widget of the Week',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: WidgetSelection(title: 'Widget of the Week', entries: _weeks),
+      routes: routes,
+    );
+  }
+}
+
+class WidgetSelection extends StatelessWidget {
+  WidgetSelection({Key key, this.title, List<WeekEntry> entries}) : _entries = entries, super(key: key);
+
+  final String title;
+  final List<WeekEntry> _entries;
+
+  @override
+  Widget build(BuildContext context) {
+    _entries.sort((a, b) => a.week.compareTo(b.week));
     return Scaffold(
       appBar: AppBar(
         title: Text(title),
       ),
       body: ListView(
-        children: _weeks
+        children: _entries
             .map((entry) => _makeListTile(context, entry))
             .expand((item) => [item, Divider()])
             .toList(),
@@ -117,15 +124,8 @@ class WidgetSelection extends StatelessWidget {
       subtitle: Text('Week #${entry.week}'),
       trailing: Icon(Icons.chevron_right),
       onTap: () {
-        _navigate(context, toContent: entry.create());
+        Navigator.pushNamed(context, '/${entry.week}');
       },
-    );
-  }
-
-  void _navigate(BuildContext context, {Widget toContent}) {
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => toContent),
     );
   }
 }

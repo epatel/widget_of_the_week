@@ -6,7 +6,7 @@ import '../week_entry.dart';
 
 class BackdropFilterExample extends StatefulWidget {
   static final weekEntry =
-      WeekEntry(24, 'BackdropFilter', () => BackdropFilterExample());
+      WeekEntry(24, 'BackdropFilter', (context) => BackdropFilterExample());
 
   @override
   _BackdropFilterExampleState createState() => _BackdropFilterExampleState();

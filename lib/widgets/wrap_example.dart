@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import '../week_entry.dart';
 
 class WrapExample extends StatefulWidget {
-  static final weekEntry = WeekEntry(3, 'Wrap', () => WrapExample());
+  static final weekEntry = WeekEntry(3, 'Wrap', (context) => WrapExample());
 
   @override
   _WrapExampleState createState() => _WrapExampleState();

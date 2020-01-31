@@ -6,7 +6,7 @@ import '../week_entry.dart';
 
 class FutureBuilderExample extends StatelessWidget {
   static final weekEntry =
-      WeekEntry(6, 'FutureBuilder', () => FutureBuilderExample());
+      WeekEntry(6, 'FutureBuilder', (context) => FutureBuilderExample());
 
   final _completer = Completer();
 

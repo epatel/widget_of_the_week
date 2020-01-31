@@ -4,7 +4,7 @@ import '../week_entry.dart';
 
 class LayoutBuilderExample extends StatelessWidget {
   static final weekEntry =
-      WeekEntry(21, 'LayoutBuilder', () => LayoutBuilderExample());
+      WeekEntry(21, 'LayoutBuilder', (context) => LayoutBuilderExample());
 
   @override
   Widget build(BuildContext context) {

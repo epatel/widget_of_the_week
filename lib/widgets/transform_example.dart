@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import '../week_entry.dart';
 
 class TransformExample extends StatefulWidget {
-  static final weekEntry = WeekEntry(23, 'Transform', () => TransformExample());
+  static final weekEntry = WeekEntry(23, 'Transform', (context) => TransformExample());
 
   @override
   _TransformExampleState createState() => _TransformExampleState();

@@ -30,7 +30,7 @@ class ChildWidget extends StatelessWidget {
 /// The example
 class InheritedModelExample extends StatefulWidget {
   static final weekEntry =
-      WeekEntry(15, 'InheritedWidget', () => InheritedModelExample());
+      WeekEntry(15, 'InheritedWidget', (context) => InheritedModelExample());
 
   @override
   _InheritedModelExampleState createState() => _InheritedModelExampleState();

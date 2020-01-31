@@ -4,7 +4,7 @@ import '../week_entry.dart';
 
 class CustomPaintExample extends StatelessWidget {
   static final weekEntry =
-      WeekEntry(18, 'CustomPaint', () => CustomPaintExample());
+      WeekEntry(18, 'CustomPaint', (context) => CustomPaintExample());
 
   @override
   Widget build(BuildContext context) {

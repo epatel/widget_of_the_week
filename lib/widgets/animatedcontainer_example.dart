@@ -6,7 +6,7 @@ import '../week_entry.dart';
 
 class AnimatedContainerExample extends StatefulWidget {
   static final weekEntry =
-      WeekEntry(4, 'AnimatedContainer', () => AnimatedContainerExample());
+      WeekEntry(4, 'AnimatedContainer', (context) => AnimatedContainerExample());
 
   @override
   _AnimatedContainerExampleState createState() =>

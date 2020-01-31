@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 import '../week_entry.dart';
 
 class AlignExample extends StatefulWidget {
-  static final weekEntry = WeekEntry(25, 'Align', () => AlignExample());
+  static final weekEntry = WeekEntry(25, 'Align', (context) => AlignExample());
 
   @override
   _AlignExampleState createState() => _AlignExampleState();
 }
 
 class _AlignExampleState extends State<AlignExample> {
-  var _align = "topLeft";
+  var _align = 'topLeft';
   var _alignment = Alignment.topLeft;
 
   @override
@@ -27,31 +27,31 @@ class _AlignExampleState extends State<AlignExample> {
               children: <Widget>[
                 radioButton(
                     alignment: Alignment.topLeft,
-                    name: "topLeft",),
+                    name: 'topLeft',),
                 radioButton(
                     alignment: Alignment.topCenter,
-                    name: "topCenter",),
+                    name: 'topCenter',),
                 radioButton(
                     alignment: Alignment.topRight,
-                    name: "topRight",),
+                    name: 'topRight',),
                 radioButton(
                     alignment: Alignment.centerLeft,
-                    name: "centerLeft",),
+                    name: 'centerLeft',),
                 radioButton(
                     alignment: Alignment.center,
-                    name: "center",),
+                    name: 'center',),
                 radioButton(
                     alignment: Alignment.centerRight,
-                    name: "centerRight",),
+                    name: 'centerRight',),
                 radioButton(
                     alignment: Alignment.bottomLeft,
-                    name: "bottomLeft",),
+                    name: 'bottomLeft',),
                 radioButton(
                     alignment: Alignment.bottomCenter,
-                    name: "bottomCenter",),
+                    name: 'bottomCenter',),
                 radioButton(
                     alignment: Alignment.bottomRight,
-                    name: "bottomRight",),
+                    name: 'bottomRight',),
               ],
             ),
           ),

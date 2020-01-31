@@ -4,7 +4,7 @@ import '../week_entry.dart';
 
 class AbsorbPointerExample extends StatefulWidget {
   static final weekEntry =
-      WeekEntry(22, 'AbsorbPointer', () => AbsorbPointerExample());
+      WeekEntry(22, 'AbsorbPointer', (context) => AbsorbPointerExample());
 
   @override
   _AbsorbPointerExampleState createState() => _AbsorbPointerExampleState();

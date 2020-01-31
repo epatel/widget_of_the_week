@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../week_entry.dart';
 
 class FittedBoxExample extends StatefulWidget {
-  static final weekEntry = WeekEntry(20, 'FittedBox', () => FittedBoxExample());
+  static final weekEntry = WeekEntry(20, 'FittedBox', (context) => FittedBoxExample());
 
   @override
   _FittedBoxExampleState createState() => _FittedBoxExampleState();

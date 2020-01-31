@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../week_entry.dart';
 
 class PageViewExample extends StatelessWidget {
-  static final weekEntry = WeekEntry(9, 'PageView', () => PageViewExample());
+  static final weekEntry = WeekEntry(9, 'PageView', (context) => PageViewExample());
 
   final _pageController = PageController();
 

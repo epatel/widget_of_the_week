@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../week_entry.dart';
 
 class TableExample extends StatelessWidget {
-  static final weekEntry = WeekEntry(10, 'Table', () => TableExample());
+  static final weekEntry = WeekEntry(10, 'Table', (context) => TableExample());
 
   @override
   Widget build(BuildContext context) {

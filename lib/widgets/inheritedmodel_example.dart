@@ -16,7 +16,7 @@ class ParentWidget extends InheritedWidget {
   }
 
   static ParentWidget of(BuildContext context) =>
-      context.inheritFromWidgetOfExactType(ParentWidget);
+      context.dependOnInheritedWidgetOfExactType(aspect: ParentWidget);
 }
 
 /// ChildWidget that accesses some Parent model data

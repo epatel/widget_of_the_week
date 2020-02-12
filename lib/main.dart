@@ -61,7 +61,6 @@ class MyApp extends StatelessWidget {
     AlignExample.weekEntry,
     PositionedExample.weekEntry,
     AnimatedBuilderExample.weekEntry,
-// 27. AnimatedBuilder https://youtu.be/N-RiyZlv8v8
 // 28. Dismissible https://youtu.be/iEMgjrfuc58
 // 29. SizedBox https://youtu.be/EHPu_DzRfqA
 // 30. ValueListenableBuilder https://youtu.be/s-ZG-jS5QHQ

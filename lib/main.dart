@@ -22,6 +22,7 @@ import 'widgets/opacity_example.dart';
 import 'widgets/pageview_example.dart';
 import 'widgets/positioned_example.dart';
 import 'widgets/safearea_example.dart';
+import 'widgets/sizedbox_example.dart';
 import 'widgets/sliverappbar_example.dart';
 import 'widgets/sliverlistandgrid_example.dart';
 import 'widgets/streambuilder_example.dart';
@@ -63,6 +64,7 @@ class MyApp extends StatelessWidget {
     PositionedExample.weekEntry,
     AnimatedBuilderExample.weekEntry,
     DismissibleExample.weekEntry,
+    SizedBoxExample.weekEntry,
 // 29. SizedBox https://youtu.be/EHPu_DzRfqA
 // 30. ValueListenableBuilder https://youtu.be/s-ZG-jS5QHQ
 // 31. Draggable https://youtu.be/QzA4c4QHZCY

@@ -8,6 +8,7 @@ import 'widgets/animatedcontainer_example.dart';
 import 'widgets/backdropfilter_example.dart';
 import 'widgets/cliprrect_example.dart';
 import 'widgets/custompaint_example.dart';
+import 'widgets/dismissible_example.dart';
 import 'widgets/expanded_example.dart';
 import 'widgets/fadeinimage_example.dart';
 import 'widgets/fadetransition_example.dart';
@@ -61,7 +62,7 @@ class MyApp extends StatelessWidget {
     AlignExample.weekEntry,
     PositionedExample.weekEntry,
     AnimatedBuilderExample.weekEntry,
-// 28. Dismissible https://youtu.be/iEMgjrfuc58
+    DismissibleExample.weekEntry,
 // 29. SizedBox https://youtu.be/EHPu_DzRfqA
 // 30. ValueListenableBuilder https://youtu.be/s-ZG-jS5QHQ
 // 31. Draggable https://youtu.be/QzA4c4QHZCY

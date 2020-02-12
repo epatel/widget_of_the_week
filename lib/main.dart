@@ -29,6 +29,7 @@ import 'widgets/streambuilder_example.dart';
 import 'widgets/table_example.dart';
 import 'widgets/tooltip_example.dart';
 import 'widgets/transform_example.dart';
+import 'widgets/valuelistenablebuilder_example.dart';
 import 'widgets/wrap_example.dart';
 
 void main() => runApp(MyApp());
@@ -65,8 +66,7 @@ class MyApp extends StatelessWidget {
     AnimatedBuilderExample.weekEntry,
     DismissibleExample.weekEntry,
     SizedBoxExample.weekEntry,
-// 29. SizedBox https://youtu.be/EHPu_DzRfqA
-// 30. ValueListenableBuilder https://youtu.be/s-ZG-jS5QHQ
+    ValueListenableBuilderExample.weekEntry,
 // 31. Draggable https://youtu.be/QzA4c4QHZCY
 // 32. AnimatedList https://youtu.be/ZtfItHwFlZ8
 // 33. Flexible https://youtu.be/CI7x0mAZiY0

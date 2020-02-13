@@ -9,6 +9,7 @@ import 'widgets/backdropfilter_example.dart';
 import 'widgets/cliprrect_example.dart';
 import 'widgets/custompaint_example.dart';
 import 'widgets/dismissible_example.dart';
+import 'widgets/draggable_example.dart';
 import 'widgets/expanded_example.dart';
 import 'widgets/fadeinimage_example.dart';
 import 'widgets/fadetransition_example.dart';
@@ -67,6 +68,7 @@ class MyApp extends StatelessWidget {
     DismissibleExample.weekEntry,
     SizedBoxExample.weekEntry,
     ValueListenableBuilderExample.weekEntry,
+    DraggableExample.weekEntry,
 // 31. Draggable https://youtu.be/QzA4c4QHZCY
 // 32. AnimatedList https://youtu.be/ZtfItHwFlZ8
 // 33. Flexible https://youtu.be/CI7x0mAZiY0

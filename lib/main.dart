@@ -5,6 +5,7 @@ import 'widgets/absorbpointer_example.dart';
 import 'widgets/align_example.dart';
 import 'widgets/animatedbuilder_example.dart';
 import 'widgets/animatedcontainer_example.dart';
+import 'widgets/animatedlist_example.dart';
 import 'widgets/backdropfilter_example.dart';
 import 'widgets/cliprrect_example.dart';
 import 'widgets/custompaint_example.dart';
@@ -69,8 +70,7 @@ class MyApp extends StatelessWidget {
     SizedBoxExample.weekEntry,
     ValueListenableBuilderExample.weekEntry,
     DraggableExample.weekEntry,
-// 31. Draggable https://youtu.be/QzA4c4QHZCY
-// 32. AnimatedList https://youtu.be/ZtfItHwFlZ8
+    AnimatedListExample.weekEntry,
 // 33. Flexible https://youtu.be/CI7x0mAZiY0
 // 34. MediaQuery https://youtu.be/A3WrA4zAaPw
 // 35. Spacer https://youtu.be/7FJgd7QN1zI

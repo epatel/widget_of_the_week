@@ -39,7 +39,7 @@ class _DraggableExampleState extends State<DraggableExample> {
             child: Center(
               child: DragTarget<Color>(
                 onAccept: (value) {
-                  _color = mixInColor(_color, value, _nextAmountDivisor);
+                  _color = _mixInColor(_color, value, _nextAmountDivisor);
                   _nextAmountDivisor += 1.0;
                 },
                 builder: (context, candidates, rejects) {
@@ -56,7 +56,7 @@ class _DraggableExampleState extends State<DraggableExample> {
                       child: Container(
                         width: 300,
                         height: 300,
-                        color: mixInColor(
+                        color: _mixInColor(
                                 _color, candidates.first, _nextAmountDivisor),
                       ),
                     );
@@ -70,7 +70,7 @@ class _DraggableExampleState extends State<DraggableExample> {
     );
   }
 
-  Color mixInColor(Color colorMain, Color color, double amountDivisor) {
+  Color _mixInColor(Color colorMain, Color color, double amountDivisor) {
     return Color.fromARGB(
         255,
         (colorMain.red * (amountDivisor - 1) + color.red) ~/ amountDivisor,

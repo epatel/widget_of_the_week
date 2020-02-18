@@ -28,6 +28,7 @@ class _AnimatedListExampleState extends State<AnimatedListExample> {
       return [item, '--'];
     }).toList();
     _timer = Timer.periodic(Duration(seconds: 3), (timer) {
+      // Remove last two items, the cell + the divider
       _animatedListKey.currentState.removeItem(_items.length - 1,
           (context, animation) {
         return Divider();
@@ -54,6 +55,7 @@ class _AnimatedListExampleState extends State<AnimatedListExample> {
         duration: Duration(milliseconds: 100),
       );
       _items.removeLast();
+      // Add new items first, a cell + a divider
       _itemIndex += 1;
       _items.insert(0, '--');
       _items.insert(0, 'This is ListTile #$_itemIndex');
